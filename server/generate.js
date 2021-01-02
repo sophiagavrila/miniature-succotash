@@ -10,7 +10,10 @@ for (let i=0; i<=300; i++) {
         name: faker.commerce.productName(),
         description: faker.lorem.sentences(),
         price: faker.commerce.price(),
-        imageUrl: "https://source.unsplash.com/random/300x300",
+        imageUrl:  faker.random.arrayElement([
+            faker.image.nature(), 
+            faker.image.city(), 
+            faker.image.food()]), 
         quantity: faker.random.number()
     })
 }
